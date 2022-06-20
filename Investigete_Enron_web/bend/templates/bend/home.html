@@ -34,13 +34,23 @@
             {{ form.body_text }}
 
             <div class="btn">
-                <input type="button" value="Autofill" id="autofill">
-                <input type="button" value="Relation" id="relation">
-                <input type="button" value="Who wrote it" id="who">
+                <a href="#">
+                    <input type="submit" value="Autofill" name="autofill" id="autof">
+                </a>
+
+                <a href="#">
+                    <input type="submit" name="relation" value="Predict">
+                </a>
+
+                <!-- <a href="#">
+                    <input type="submit" value="Who wrote it" name="who">
+                </a> -->
             </div>
         </form>
     </div>
 </section>
+
+
 {% endblock %}
 
 
