@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+<header class="header">
+    <div class="container">
+        <div>
+            <h1>The Enron Scandal</h1>
+            <p>Find out how the enron emails relat to the enron scandal and also who might have written a particular email. <br>
+            Click random to get an email right from the corpus (we assure you that it was not used to train any model)</p>
+        </div>
+        <div class="vertical-line"></div>
+        
+        <div class="we">
+            <h2>We answer two questions</h2>
+            <ol>
+                <li>How is the email related to the scandal?</li>
+                <li>Who might have written this email?</li>
+            </ol>
+        </div>
+    </div>
+</header>
+
+<section class="uinput">
+    <div class="container">
+        <textarea name="email-field" id="e-field" cols="50" rows="20"></textarea>
+
+        <form action="#" class="uform" method="post">
+            <div class="btn">
+                <input type="button" value="Autofill">
+                <input type="button" value="Relation">
+                <input type="button" value="Who wrote it">
+            </div>
+        </form>
+    </div>
+</section>
+{% endblock %}
+
+
+

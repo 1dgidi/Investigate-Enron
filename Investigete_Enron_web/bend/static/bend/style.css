@@ -1,0 +1,155 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    background: #f1f3ff;
+}
+
+h1,
+h2 {
+    margin-bottom: 15px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.navbar {
+    background: #6e4364;
+    color: rgb(255, 255, 255);
+    height: 60px;
+}
+
+.logo {
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: rgba(243, 150, 220, 0.753);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar ul li {
+    margin-left: 20px;
+}
+
+.header {
+    background-color: #f1b3dd;
+    color: rgb(83, 18, 51);
+    min-height: 200px;
+}
+
+.header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .container .vertical-line {
+    width: 50px;
+    background-color: balck;
+}
+
+.header .container .we {
+    background: #640855;
+    color: white;
+    border-radius: 10px;
+    margin: 15px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0. 0.6);
+    padding: 25px;
+}
+
+section {
+    background-color: rgb(128, 44, 116);
+}
+
+section .container {
+    display: flex;
+    
+}
+
+section .container textarea {
+    margin: 10px;
+}
+
+section .container form {
+    display: flex;
+    
+}
+
+section .container form input {
+    display: block;
+    margin-left: 20px;
+    margin-top: 20px;
+    padding: 20px;
+    width: 150px;
+    height: 75px;
+    background-color: rgb(240, 150, 202);
+    font-size: 20px;
+    color: white;
+}
+
+.boxes .container {
+    display: flex;
+    justify-content: center;
+    height: 90vh;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.box {
+    flex: 1 2 30px;
+    background: #5c737977;
+    color: white;
+    border-radius: 10px;
+    margin: 20px;
+    /* box-shadow: 0 3px 5px rgba(0, 0, 0. 0.6); */
+    padding: 15px 20px;
+    height: 200px;
+}
+
+.box ul {
+    display: flex;
+    /* justify-content: space-between; */
+}
+
+.box ul li {
+    margin-left: 20px;
+}
