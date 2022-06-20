@@ -28,7 +28,7 @@ ul {
 }
 
 .navbar {
-    background: #6e4364;
+    background: #0e0d0d;
     color: rgb(255, 255, 255);
     height: 60px;
 }
@@ -88,6 +88,7 @@ ul {
 }
 
 .header .container .we {
+    /* display: flex; */
     background: #640855;
     color: white;
     border-radius: 10px;
@@ -102,28 +103,41 @@ section {
 
 section .container {
     display: flex;
-    
+    height: 52vh;
 }
 
-section .container textarea {
+/* section .container textarea {
     margin: 10px;
-}
+} */
 
 section .container form {
     display: flex;
-    
+    /* justify-content: flex-end; */
+    /* flex-wrap: wrap; */
+}
+
+section .container form .btn {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 }
 
 section .container form input {
-    display: block;
+    /* display: block; */
+    /* flex: 1 0 100px; */
     margin-left: 20px;
-    margin-top: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     padding: 20px;
     width: 150px;
-    height: 75px;
+    min-height: 13vh;
     background-color: rgb(240, 150, 202);
     font-size: 20px;
     color: white;
+    border-radius: 10px;
+    /* flex-direction: column; */
+    
+    
 }
 
 .boxes .container {
@@ -152,4 +166,12 @@ section .container form input {
 
 .box ul li {
     margin-left: 20px;
+}
+
+section .container form textarea {
+    border-radius: 10px;
+    /* margin-bottom: 50px; */
+    margin: 10px;
+    min-width: 60vw;
+    resize: None;
 }

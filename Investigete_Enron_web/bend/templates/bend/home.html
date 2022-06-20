@@ -7,8 +7,10 @@
     <div class="container">
         <div>
             <h1>The Enron Scandal</h1>
-            <p>Find out how the enron emails relat to the enron scandal and also who might have written a particular email. <br>
-            Click random to get an email right from the corpus (we assure you that it was not used to train any model)</p>
+            <p>
+                Find out how the enron emails relat to the enron scandal and also who might have written a particular email. <br>
+                Click Autofill to get an email right from the corpus
+            </p>
         </div>
         <div class="vertical-line"></div>
         
@@ -24,13 +26,17 @@
 
 <section class="uinput">
     <div class="container">
-        <textarea name="email-field" id="e-field" cols="50" rows="20"></textarea>
+        <!-- <textarea name="email-field" id="e-field" cols="50" rows="20"></textarea> -->
 
-        <form action="#" class="uform" method="post">
+        <form action="" class="uform" method="post">
+            <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
+
+            {{ form.body_text }}
+
             <div class="btn">
-                <input type="button" value="Autofill">
-                <input type="button" value="Relation">
-                <input type="button" value="Who wrote it">
+                <input type="button" value="Autofill" id="autofill">
+                <input type="button" value="Relation" id="relation">
+                <input type="button" value="Who wrote it" id="who">
             </div>
         </form>
     </div>
