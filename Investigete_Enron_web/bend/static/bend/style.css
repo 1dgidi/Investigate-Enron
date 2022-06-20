@@ -175,3 +175,12 @@ section .container form textarea {
     min-width: 60vw;
     resize: None;
 }
+
+.uinput .container {
+    display: flex;
+    flex-direction: column;
+}
+
+.pinput .container div {
+    margin-top: 10px;
+}
