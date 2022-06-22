@@ -1,20 +1,15 @@
 from django.db import models
 
-# from keras.models import load_model
+from keras.models import load_model
 # from gensim import models as lda
 # from gensim.corpora.dictionary import Dictionary
 # import spacy
 
-# import nltk
-# nltk.download('wordnet')
-
 import os
-# import numpy as np
+import numpy as np
 import pickle
 
-email_authors = [
-
-]
+email_authors = pickle.load(open('ml/pickle/tc_'))
 
 topics = (
 
@@ -38,15 +33,15 @@ class PredictModel(models.Model):
     # def preprocess(text):
     #     return stemmer.stem(WordNetLemmatizer().lemmatize(text, pos='v'))
 
-    # def save(self, *args, **kwargs):
-    #     current_path = os.path.dirname(__file__)
-    #     model_folder = os.path.join(current_path, 'models')
+    def save(self, *args, **kwargs):
+        current_path = os.path.dirname(__file__)
+        model_folder = os.path.join(current_path, 'models')
 
-    #     # text classification
-    #     model_path = os.path.join(model_folder, 'tm_model.h5')
-    #     model = load_model(model_path)
-    #     predict = model.predict([self.body_text])
-    #     self.who_wrote_it = email_authors[np.argmax(predict)]
+        # text classification
+        model_path = os.path.join(model_folder, 'tm_model.h5')
+        model = load_model(model_path)
+        predict = model.predict([self.body_text])
+        self.who_wrote_it = email_authors[np.argmax(predict)]
         
     #     # topic modeling
     #     en_model = spacy.load('en_core_web_sm')
@@ -66,4 +61,4 @@ class PredictModel(models.Model):
     #     self.relation = np.argmax([for index, score in sorted(model2[bow_vector], key=lambda tup: -1*tup[1])])
 
     #     self.relation_elaboration = explanation[self.relation]
-    #     return super(PredictModel, self).save(*args, **kwargs)
+        return super(PredictModel, self).save(*args, **kwargs)
